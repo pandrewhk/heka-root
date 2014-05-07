@@ -1,6 +1,6 @@
-# $FreeBSD: src/etc/group,v 1.35.10.1 2009/08/03 08:13:06 kensmith Exp $
+# $FreeBSD: release/10.0.0/etc/group 256366 2013-10-12 06:08:18Z rpaulo $
 #
-wheel:*:0:root,apantyukhin,blackout
+wheel:*:0:root,andrew,blackout
 daemon:*:1:
 kmem:*:2:
 sys:*:3:
@@ -18,6 +18,7 @@ smmsp:*:25:
 mailnull:*:26:
 guest:*:31:
 bind:*:53:
+unbound:*:59:
 proxy:*:62:
 authpf:*:63:
 _pflogd:*:64:
@@ -27,21 +28,13 @@ dialer:*:68:
 network:*:69:
 audit:*:77:
 www:*:80:
+hast:*:845:
 nogroup:*:65533:
 nobody:*:65534:
-apantyukhin:*:1001:
-fetchmail:*:124:
-postfix:*:125:
+git_daemon:*:964:
 maildrop:*:126:
-dovecot:*:143:
-mysql:*:88:
+postfix:*:125:
 pgsql:*:70:
-mailman:*:91:
-spamd:*:58:
-ts:*:1003:
-res:*:1004:
-jabber:*:93:
-a2:*:1005:
-gubwiki:*:1007:
-jura:*:1008:
-disvn:*:1009:andrew,sat,www
+andrew:*:1001:
+blackout:*:11006:
+jura:*:11008:
