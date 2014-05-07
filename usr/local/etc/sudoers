@@ -1,0 +1,44 @@
+# sudoers file.
+#
+# This file MUST be edited with the 'visudo' command as root.
+# Failure to use 'visudo' may result in syntax or file permission errors
+# that prevent sudo from running.
+#
+# See the sudoers man page for the details on how to write a sudoers file.
+#
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# Defaults specification
+# Uncomment if needed to preserve environmental variables related to the
+# FreeBSD pkg_* utilities.
+#Defaults	env_keep += "PKG_PATH PKG_DBDIR PKG_TMPDIR TMPDIR PACKAGEROOT PACKAGESITE PKGDIR"
+
+# Uncomment if needed to preserve environmental variables related to
+# portupgrade. (portupgrade uses some of the same variables as the pkg_*
+# tools so their Defaults above should be uncommented if needed too.)
+#Defaults	env_keep += "PORTSDIR PORTS_INDEX PORTS_DBDIR PACKAGES PKGTOOLS_CONF"
+
+# Runas alias specification
+
+# User privilege specification
+root	ALL=(ALL) ALL
+
+# Uncomment to allow people in group wheel to run all commands
+%wheel	ALL=(ALL) NOPASSWD: ALL
+
+# Same thing without a password
+# %wheel	ALL=(ALL) NOPASSWD: ALL
+
+# Samples
+# %users  ALL=/sbin/mount /cdrom,/sbin/umount /cdrom
+# %users  localhost=/sbin/shutdown -h now
+#
+
+www	ALL=(gubwiki,a2) NOPASSWD: SETENV: /usr/local/bin/perl
+www,a2	ALL=(root) NOPASSWD: /root/cpw.sh
+jura	ALL=(root) NOPASSWD: /usr/local/sbin/portinstall

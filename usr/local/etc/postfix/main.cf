@@ -1,0 +1,36 @@
+queue_directory = /var/spool/postfix
+command_directory = /usr/local/sbin
+daemon_directory = /usr/local/libexec/postfix
+mail_owner = postfix
+#unknown_local_recipient_reject_code = 550
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+mynetworks_style = host
+inet_protocols = all
+debug_peer_level = 2
+debugger_command =
+	 PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
+	 xxgdb $daemon_directory/$process_name $process_id & sleep 5
+sendmail_path = /usr/local/sbin/sendmail
+newaliases_path = /usr/local/bin/newaliases
+mailq_path = /usr/local/bin/mailq
+setgid_group = maildrop
+html_directory = /usr/local/share/doc/postfix
+manpage_directory = /usr/local/man
+sample_directory = /usr/local/etc/postfix
+readme_directory = /usr/local/share/doc/postfix
+
+home_mailbox = preinbox/
+recipient_delimiter = +
+smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, reject_unauth_destination
+
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_authenticated_header = yes
+smtpd_sasl_path = auth.sock
+smtpd_sasl_type = dovecot
+smtpd_use_tls = yes
+smtpd_tls_key_file = /usr/local/etc/postfix/heka.private.pem
+smtpd_tls_cert_file = /usr/local/etc/heka.public.pem
+data_directory = /var/db/postfix
+
+message_size_limit = 300000000
+mailbox_size_limit = 300000000
