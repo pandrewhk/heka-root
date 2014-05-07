@@ -1,0 +1,96 @@
+$ORIGIN .
+$TTL 3600	; 1 hour
+cenkes.org		IN SOA	heka.cenkes.org. sat.heka.cenkes.org. (
+				2010052108 ; serial
+				3600       ; refresh (1 hour)
+				900        ; retry (15 minutes)
+				3600000    ; expire (5 weeks 6 days 16 hours)
+				3600       ; minimum (1 hour)
+				)
+			NS	ns0.xname.org.
+			NS	ns1.xname.org.
+			NS	ns2.afraid.org.
+			NS	heka.cenkes.org.
+			A	208.86.227.241
+			MX	10 heka.cenkes.org.
+			TXT	"v=spf1 a mx -all"
+			AAAA	2002:d056:e3f1::1
+$ORIGIN cenkes.org.
+a2			CNAME	srv.a2tele.com.
+amilo			AAAA	2001:16d8:ff40:0:2c0:a8ff:febd:c139
+$ORIGIN amilo.cenkes.org.
+*			CNAME	amilo.cenkes.org.
+$ORIGIN cenkes.org.
+aw			CNAME	heka
+b			CNAME	heka
+bethlehem		CNAME	beth10.dyndns.org
+blog			CNAME	heka
+bsd			CNAME	dh
+bsd0			CNAME	dh
+bsd1			CNAME	dh
+bsd2			CNAME	apollo.gubkin.ru.
+bsd3			CNAME	proxy.gubkin.ru.
+cvs			CNAME	heka
+cvsup			CNAME	saiph
+d			NS	heka
+dh			A	208.113.173.245
+dhh			CNAME	crush.dreamhost.com.
+diwiki			A	208.86.227.241
+feneos			KEY	512 3 3 (
+				CKHLciocrHCuPmB10uRx6DjEDy6llpNQUKsyl5cOnFYO
+				c6A02FA54+fNoWbZ2Dux7loVCS9WJoto+oClFZtFKBFM
+				4ovShvdSIi5wYOS2ThMmOzVapa1Ih/KOecy2cRdicOPo
+				xLSZqUNcoTdUJOAUfN7LUq1Q3ix1gKASnh8epiyFSQmr
+				fyQplF8nBc3+KZcxVrdeOx98N9ZYhlyqpvIPkDntXwA2
+				WPTUGMVG51GHqAy5Ri4Dav34ZlvrEqW/7zad1fm77o3J
+				Ckyo2kkrlnYydriTlFH+Hw8N6Wn6XqqWskOpHVp4Nqy9
+				2q2sbRaiOLlL1hTAp6VIBqT5s54cgnsET5diEeSTEAlR
+				oDvR3q+UmwvEFJw7XAAImIQx2RVLVjroTnQHXHgJ1yJd
+				Zksjotb7meCHJqbPZFN2TiS///dx4T9N0Dyzclxu03nc
+				h3vnwgJuWS8OKqF+u1Rqe+NljhyCwgAtyL25rRTdb+Ge
+				Lryn4eUTJ4ZShrYRySlGOXfQcYW2R/cj1cDCvTMzek0b
+				1SNjYvmvY+es
+				) ; key id = 36544
+			AAAA	2001:16d8:ff00:1c3::2
+ftp			CNAME	heka
+google3c201a86839a0f04	CNAME	google.com.
+heka			A	208.86.227.241
+			AAAA	2002:d056:e3f1::1
+heka6			AAAA	2002:d056:e3f1::1
+homam			AAAA	2001:16d8:ff40:0:21a:4dff:fe7e:34d8
+infofarmer		CNAME	heka
+labs			CNAME	heka
+libra			A	192.168.18.82
+			AAAA	2001:16d8:cc10:0:223:b4ff:fec7:3427
+mlnet			AAAA	2001:16d8:cc10:0:20f:3dff:feca:c494
+oldheka			A	208.79.80.110
+pollux			AAAA	2001:16d8:cc10:0:21f:d0ff:fe51:95ac
+procyon			AAAA	2001:16d8:cc10:0:21f:e2ff:fe93:492c
+rsync			CNAME	heka
+$TTL 300	; 5 minutes
+saiph			A	91.79.123.93
+$TTL 3600	; 1 hour
+			KEY	512 3 3 (
+				COImp6MuU6eAV9oHegxeAQcuL8lnpyFcTZOxOBDfnOko
+				rAqICWKz6a1WTItw/lRScbNCxEQelfJDDGZ7lXO1x5V/
+				sQTRKVtCpksDnHklJJaSkHDKYlYGdmg2imhliHgZJqIR
+				CpIqshq8P3PuYcpkSGXczaMp3HQ20xtSjl0AakSERkf1
+				ok6sqN4Pz1tZSRCuV9zjUs0RfQd98d8hUl7U1T5Iawb1
+				PmkArZKMq/HXnW8hNsq0H74xIicIfUW9D3nSDmbpGEDG
+				NDk0s0HoEz1eqj3QYLeNeq7zVeuxv1qP1+abfW8xa6LW
+				QkieHy3tblJth5QIMeh9kFaYjx2ge8EAOeQC+DoGk3Ix
+				F9Lb6JCDH35F1W9U6nTEXR5AtnBRxUsv/E0PV2rAYyEn
+				nVW5eL9eSwm+yNdYdku58O/99xA9aRuokVJwMb3l0Ivj
+				+AOi+rAsDdpqmdXuM44k5JyZfzvziXgGb50rElAKUDOK
+				KqruWdtI/BJy6YKdq9iGz+OQnQmhkuvT32AKEgxsgspr
+				uQleWrDJlyhd
+				) ; key id = 37329
+			AAAA	2001:16d8:cc10:0:20f:3dff:feca:c494
+vim.srv			CNAME	heka
+svn			CNAME	heka
+tenea			A	204.109.63.245
+tttest			A	1.2.3.4
+twiki			CNAME	heka
+tyl			AAAA	2001:16d8:cc10:0:250:8dff:fe6a:62df
+wiki			CNAME	heka
+www			CNAME	heka
